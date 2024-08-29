@@ -13,7 +13,8 @@ function Dashboard() {
     <div className="wrapper">
       <SideBar />
 
-      <div className="content-wrapper">
+      <div className="flex-grow-1 p-3">
+        <h2>Dashboard</h2>
         <div className="row m-4 mb-4">
           <div className="col-12 col-sm-6 col-lg-3 mb-3">
             <Card
@@ -49,7 +50,6 @@ function Dashboard() {
           </div>
         </div>
 
-        {/* Charts Section */}
         <div className="row mt-4">
           <div className="col-12 col-md-6 mb-4">
             <Chart
