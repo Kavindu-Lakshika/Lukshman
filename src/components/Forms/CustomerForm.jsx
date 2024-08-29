@@ -1,7 +1,42 @@
+import { useState } from 'react';
 
 const CustomerForm= ({ onClose, onSave }) =>{
+
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [error, setError] = useState('');
+
+  const validatePhoneNumber = (number) => {
+    // Regex to validate:
+    // - Length must be 12 characters
+    // - First character must be +
+    // - Second character must be 9
+    // - Third character must be 4
+    // - The remaining characters must be digits
+    const regex = /^\+94\d{9}$/;
+
+    if (!regex.test(number)) {
+      return 'Mobile number must be in the format +94 followed by 9 digits.';
+    }
+
+    return '';
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const validationError = validatePhoneNumber(phoneNumber);
+
+    if (validationError) {
+      setError(validationError);
+    } else {
+      setError('');
+      // Submit form or perform desired action here
+      console.log('Form submitted successfully:', phoneNumber);
+    }
+  };
+
   return (
-    <form className="p-4">
+    <form className="p-4" onSubmit={handleSubmit}>
       <div className="row mb-3">
         <div className="col-md-3">
           <div className="form-group">
@@ -32,11 +67,14 @@ const CustomerForm= ({ onClose, onSave }) =>{
             <h5 htmlFor="formMobile1">Mobile Number</h5>
             <input
               type="text"
-              id="formMobile1"
+              id="phoneNumber"
+              value={phoneNumber}
               className="form-control"
               placeholder="Mobile Number"
+              onChange={(e) => setPhoneNumber(e.target.value)}
             />
           </div>
+          {error && <p style={{ color: 'red' }}>{error}</p>}
         </div>
         <div className="col-md-6">
           <div className="form-group">
