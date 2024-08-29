@@ -1,0 +1,55 @@
+.content {
+    max-width: 400px; /* Set a more reasonable width for the entire content */
+    margin: 0 auto;
+  }
+  
+  .image {
+    width: 100%; /* Make the image fill the content wrapper */
+    height: 120px; /* Adjust the image height */
+    object-fit: cover; /* Ensure the image doesn't stretch */
+  }
+  
+  .title {
+    font-size: 1.2rem; /* Resize the title */
+  }
+  
+  .subtitle {
+    font-size: 1rem; /* Resize the subtitle */
+  }
+  
+  .form-control {
+    font-size: 0.9rem; /* Resize the form input text */
+    padding: 10px; /* Adjust padding to match new size */
+  }
+  
+  .imgs {
+    width: 100%;
+  }
+  .btn{
+    border-radius: 25px;
+  }
+  .form-control{
+    border-radius: 25px;
+    background-color: white;
+    border: 1px solid black;
+  }
+  .input-group {
+    position: relative;
+}
+
+.form-control {
+    padding-right: 40px; /* Ensure space for the button */
+}
+
+.input-group-text {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: transparent; /* Make the button background transparent */
+    padding: 0 25px;
+    cursor: pointer;
+}
+
