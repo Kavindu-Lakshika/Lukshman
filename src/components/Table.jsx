@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPen,
+  faTrash
+} from "@fortawesome/free-solid-svg-icons";
 
-const Table = ({ data, columns,onAdd,btnName, onEdit, onDelete }) => {
+const Table = ({ data, columns, onAdd, btnName, onEdit, onDelete }) => {
   const [tableData, setTableData] = useState(data);
   const [tableColumns, setTableColumns] = useState(columns);
   const [searchQuery, setSearchQuery] = useState("");
@@ -49,7 +54,9 @@ const Table = ({ data, columns,onAdd,btnName, onEdit, onDelete }) => {
         </div>
 
         <div className="col-md-6 d-flex justify-content-end">
-          <button className="btn btn-primary" onClick={onAdd}>{btnName}</button>
+          <button className="btn btn-primary" onClick={onAdd}>
+            {btnName}
+          </button>
         </div>
       </div>
 
@@ -75,13 +82,13 @@ const Table = ({ data, columns,onAdd,btnName, onEdit, onDelete }) => {
                       className="btn btn-warning btn-sm me-3"
                       onClick={() => onEdit(rowIndex)}
                     >
-                      Edit
+                      <FontAwesomeIcon icon={faPen} />
                     </button>
                     <button
                       className="btn btn-danger btn-sm"
                       onClick={() => onDelete(rowIndex)}
                     >
-                      Delete
+                     <FontAwesomeIcon icon={faTrash} />
                     </button>
                   </td>
                 </tr>
