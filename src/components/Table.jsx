@@ -72,7 +72,7 @@ const Table = ({ data, columns,onAdd,btnName, onEdit, onDelete }) => {
                   ))}
                   <td>
                     <button
-                      className="btn btn-warning btn-sm me-2"
+                      className="btn btn-warning btn-sm me-3"
                       onClick={() => onEdit(rowIndex)}
                     >
                       Edit

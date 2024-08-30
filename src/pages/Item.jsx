@@ -4,9 +4,9 @@ import Table from "../components/Table";
 import ItemForm from "../components/Forms/ItemForm";
 
 function Item() {
-  const columns = ["Name", "Code"];
+  const columns = ["Branch", "Brand","Serial Number","Item No","Item Code","Item Name","Item Price","Product Serial Number","Buyer","Date","Invoice Number","Warranty Period"];
     const data = [
-      ["Canon","Mark ii"],
+      ["Kandy","Canon","0330","11","16","Mark ii","3000","2001","xyz","2024.08.11","33","3"],
     ];
     const btnName = "Add New Item";
   
