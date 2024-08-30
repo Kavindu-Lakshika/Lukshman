@@ -21,7 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow-y: auto; /* Allows scrolling if content is larger than screen */
+  overflow-y: auto; 
 }
 
 #sidebar.expand {
@@ -69,6 +69,11 @@ a.sidebar-link {
   font-size: 0.9rem;
   white-space: nowrap;
   border-left: 3px solid transparent;
+}
+
+a.sidebar-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-left: 3px solid #3b7ddd;
 }
 
 .sidebar-link svg {
