@@ -9,9 +9,6 @@ import Item from "./pages/Item";
 import Buyers from "./pages/Buyers";
 import Vender from "./pages/Vender";
 import Brands from "./pages/Brands";
-import ItemForm from "./components/Forms/ItemForm";
-import VenderForm from "./components/Forms/VenderForm";
-import CustomerForm from "./components/Forms/CustomerForm";
 
 function App() {
   return (
@@ -26,12 +23,6 @@ function App() {
         <Route path="/buyer" element={<Buyers />} />
         <Route path="/vender" element={<Vender />} />
         <Route path="/brand" element={<Brands />} />
-
-        <Route path="/itemForm" element={<ItemForm />} />
-        <Route path="/venderForm" element={<VenderForm />} />
-        <Route path="/customerForm" element={<CustomerForm />} />
-
-
       </Routes>
     </BrowserRouter>
   )
